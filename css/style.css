@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Poppins:wght@400;500;700&display=swap");
 
-:root{
-  --red: #FD562A;
+:root {
+  --red: #fd562a;
 }
 
 body p {
@@ -36,7 +36,7 @@ a {
 }
 
 .section-block {
-  padding-block: 80px;
+  padding-block: 90px;
 }
 
 .section-content {
@@ -202,6 +202,9 @@ a {
   color: gold !important;
 }
 
+.navbar-brand img {
+  width: 70px;
+}
 .navbar .nav-item .nav-link {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -248,7 +251,7 @@ a {
   background-image: url(../img/hero-bg.jpg);
   right: 0;
   padding: 0;
-  transform: translateY(-90%);
+  transform: translateY(-100%);
   transition: 0.2s transform cubic-bezier(0.3, 0.73, 0.3, 0.7);
   z-index: 4;
 }
@@ -266,7 +269,7 @@ body.down .header-default.clone {
   background-repeat: no-repeat;
   background-size: cover;
   height: 110vh;
-  margin-block-start: -218px;
+  margin-block-start: -100px;
 }
 
 .hero-head small {
@@ -315,7 +318,7 @@ body.down .header-default.clone {
 
 .hero-area .de-hero-3 {
   right: 2%;
-  TOP: 380px;
+  top: 380px;
   position: absolute;
 }
 
@@ -517,6 +520,7 @@ body.down .header-default.clone {
 ************************************************************/
 .about {
   background-color: #2f2f2f;
+  height: 110vh;
 }
 
 .about h2 {
@@ -560,6 +564,32 @@ body.down .header-default.clone {
   margin-bottom: 4px;
   text-transform: uppercase;
   color: #fff;
+}
+
+.about-img img:first-child {
+  width: 700px;
+  height: 350px;
+  border-radius: 12px 12px 0 0;
+  opacity: 1;
+  transition: 0.5s ease;
+  box-shadow: rgb(248, 232, 5) 0px 1px 4px, rgb(241, 218, 8) 0px 0px 0px 3px;
+}
+
+.about-img img:last-child {
+  width: 700px;
+  height: 350px;
+  border-radius: 0 0 12px 12px;
+  opacity: 0.1;
+  transition: 0.5s ease;
+}
+
+.about-img img:first-child:is(:hover, :focus-within) {
+  opacity: 1;
+}
+.about-img img:last-child:is(:hover, :focus-within) {
+  opacity: 1;
+  box-shadow: rgb(212, 235, 10) 0px 20px 30px -10px;
+  border-top: 3px solid yellow;
 }
 
 /***********************************************************
@@ -1170,7 +1200,7 @@ body.down .header-default.clone {
 }
 .blog .post-meta li a {
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   text-transform: initial;
   transition: 0.3s;
@@ -1187,7 +1217,7 @@ body.down .header-default.clone {
   overflow: hidden;
 }
 .blog .image-wrapper:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1402,25 +1432,111 @@ body.down .header-default.clone {
 }
 
 /***********************************************************
-  #11 CONTACT SECTION
+  #11 PROCESS-SECTION
+************************************************************/
+
+.process {
+  background-image: url(../img/footer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.process .single-process {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+.process .single-process .icon {
+  background: #1e2a55;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 56px;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  position: relative;
+}
+.process .single-process .content h5 {
+  color: #fff;
+}
+.process .single-process .content p {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.process .single-process span {
+  position: absolute;
+  z-index: 1;
+}
+.process .single-process span::before {
+  content: "";
+  position: absolute;
+  content: "";
+  height: 170px;
+  border-right: 1px dashed #f5faff;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: -55px;
+  left: 122px;
+  z-index: -1;
+}
+.process .single-process span img {
+  max-width: 100px;
+  margin-left: 100px;
+  -webkit-animation: leftani 5s infinite linear;
+  animation: leftani 5s infinite linear;
+}
+
+@-webkit-keyframes leftani {
+  0% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+  50% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+@keyframes leftani {
+  0% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+  50% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+/***********************************************************
+  #12 CONTACT SECTION
 ************************************************************/
 .contact {
   padding-bottom: 60px;
   position: relative;
   background-color: #333333;
 }
-.contact .icon-box .bx{
+.contact .icon-box .bx {
   color: #fd562a;
   background-color: gold;
   padding: 15px;
   margin-right: 24px;
   font-size: 24px;
 }
-.content-wrapper h4{
+.content-wrapper h4 {
   color: #fff;
 }
 .contact a {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #cccc;
   text-transform: initial;
   transition: 0.3s;
@@ -1432,7 +1548,7 @@ body.down .header-default.clone {
   margin-bottom: 0;
   color: #cccc;
 }
-.contact .map-wrapper{
+.contact .map-wrapper {
   border-radius: 10px;
   overflow: hidden;
 }
@@ -1461,8 +1577,7 @@ body.down .header-default.clone {
 .contact .form-control {
   padding: 12px 18px;
 }
-.contact .form-control
-{
+.contact .form-control {
   border-color: #606060;
   background: #cccccca9;
   color: #b0aac0;
@@ -1473,7 +1588,7 @@ body.down .header-default.clone {
   box-shadow: none;
 }
 .contact button {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
 }
 .contact .form-message p {
@@ -1504,16 +1619,16 @@ body.down .header-default.clone {
 }
 
 /***********************************************************
-  #12 FOOTER SECTION
+  #13 FOOTER SECTION
 ************************************************************/
-footer{
-  background-image: url(../img/footer-bg.jpg);
+footer {
+  background-image: url(../img/hero-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-footer p{
+footer p {
   margin-block: 30px 50px;
 }
 
@@ -1530,4 +1645,12 @@ footer p{
 .back-to-top .bx {
   background: gold;
   color: var(--red);
+}
+
+body {
+  /* overflow: hidden;	 */
+}
+
+canvas {
+  display: block;
 }
