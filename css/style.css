@@ -260,6 +260,10 @@ body.down .header-default.clone {
   transform: translateY(0);
 }
 
+.navbar-toggler-icon {
+  background: gold;
+}
+
 /***********************************************************
   #2 HERO SECTION
 ************************************************************/
@@ -375,6 +379,12 @@ body.down .header-default.clone {
   color: gold;
 }
 
+@media screen and (max-width: 600px) {
+  .hero .cs-row {
+    display: flex;
+  }
+}
+
 .solar-system {
   width: 500px;
   height: 500px;
@@ -457,6 +467,12 @@ body.down .header-default.clone {
   bottom: 50px;
   left: 120px;
   z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-area {
+    margin-block: 20px !important;
+  }
 }
 
 /***********************************************************
@@ -1011,6 +1027,16 @@ body.down .header-default.clone {
   background-color: #222222;
 }
 
+@media screen and (max-width: 600px) {
+  .feature img {
+    max-width: 80%;
+  }
+  .feature .image-block {
+    display: flex;
+    justify-content: center;
+    margin-block-end: 50px;
+  }
+}
 .feature h2 {
   font-size: 48px;
   margin-bottom: 30px;
@@ -1647,10 +1673,40 @@ footer p {
   color: var(--red);
 }
 
-body {
-  /* overflow: hidden;	 */
-}
-
-canvas {
-  display: block;
+@media screen and (max-width: 586px) {
+  footer {
+    display: block;
+    text-align: center;
+  }
+  .contact h4,
+  .icon-box {
+    margin-top: 20px;
+  }
+  .hero {
+    margin-block-start: -110px;
+  }
+  .hero-head {
+    position: absolute;
+    top: 0%;
+    transform: translateY(-100%);
+  }
+  .hero-content-right {
+    position: absolute;
+    top: 0%;
+    transform: translateY(100%);
+    margin-top: 30px;
+  }
+  .contact .map-wrapper {
+    width: 100%;
+  }
+  .hero-content-left {
+    text-align: center;
+  }
+  .about .section-block {
+    padding-block: 0;
+  }
+  .about .personal-info {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 1fr;
+  }
 }
